@@ -8,6 +8,7 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  border-color: #115930 ;
 }
 
 .more-button {
@@ -19,3 +20,20 @@
 .dashboard-card-content {
   text-align: center;
 }
+
+/* Aplicar estilos a todas las tarjetas .dashboard-card */
+.mat-card.dashboard-card {
+  border: 2px solid #007bff; /* Cambiar el color del borde */
+  background-color: #f8f9fa; /* Cambiar el color de fondo */
+}
+
+/* Aplicar estilos al título dentro de las tarjetas */
+.mat-card.dashboard-card .mat-card-title {
+  color: #007bff; /* Cambiar el color del título */
+}
+
+/* Aplicar estilos al botón de menú dentro de las tarjetas */
+.mat-card.dashboard-card .more-button {
+  color: #007bff; /* Cambiar el color del botón de menú */
+}
+

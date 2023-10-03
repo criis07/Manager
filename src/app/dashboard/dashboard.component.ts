@@ -15,16 +15,16 @@ export class DashboardComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 }
+          { title: 'Formulario de gestor', cols: 1, rows: 2 },
+          { title: 'Consulte catálogos', cols: 1, rows: 2 },
+          { title: 'Creación de gestor', cols: 2, rows: 1 }
         ];
       }
 
       return [
-        { title: 'Get manager', cols: 1, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 2 },
-        { title: 'Card 3', cols: 1, rows: 1 }
+        { title: 'Formulario de gestor', cols: 1, rows: 2 },
+        { title: 'Consulte catalogos', cols: 1, rows: 2 },
+        { title: 'Creación de gestor', cols: 2, rows: 1 }
       ];
     })
   );

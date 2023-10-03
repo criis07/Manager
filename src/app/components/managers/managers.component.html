@@ -1,0 +1,171 @@
+<div class="container mt-4 ">
+    <div class="row">
+      <div class="col-md-6 main-container">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Buscar gestor</h5>
+            <div class="form-group search-container">
+              <input type="text" class="form-control" [(ngModel)]="identification" placeholder="ID">
+              <button class="btn btn-primary button-search" (click)="getBeneficiaryAsync()">Buscar</button>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 main-container" *ngIf="formData">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Datos del gestor</h2>
+            <form>
+              <div class="form-group">
+                <label for="country">País:</label>
+                <input type="text" class="form-control" id="country" [(ngModel)]="formData.country" name="country" disabled>
+              </div>
+              <div class="form-group">
+                <label for="identification_number">Número de Identificación:</label>
+                <input type="text" class="form-control" id="identification_number" [(ngModel)]="formData.identification_number" name="identification_number" disabled>
+              </div>
+              <div class="form-group">
+                <label for="identification_type_code">Código de Tipo de Identificación:</label>
+                <input type="text" class="form-control" id="identification_type_code" [(ngModel)]="formData.identification_type_code" name="identification_type_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="identification_type">Tipo de Identificación:</label>
+                <input type="text" class="form-control" id="identification_type" [(ngModel)]="formData.identification_type" name="identification_type" disabled>
+              </div>
+              <div class="form-group">
+                <label for="identification_issue_date">Fecha de Emisión de Identificación:</label>
+                <input type="text" class="form-control" id="identification_issue_date" [(ngModel)]="formData.identification_issue_date" name="identification_issue_date" disabled>
+              </div>
+              <div class="form-group">
+                <label for="identification_expiration_date">Fecha de Expiración de Identificación:</label>
+                <input type="text" class="form-control" id="identification_expiration_date" [(ngModel)]="formData.identification_expiration_date" name="identification_expiration_date" disabled>
+              </div>
+              <div class="form-group">
+                <label for="contact_name.first_name">Primer Nombre:</label>
+                <input type="text" class="form-control" id="first_name" [(ngModel)]="formData.contact_name.first_name" name="contact_name.first_name" disabled>
+              </div>
+              <div class="form-group">
+                <label for="contact_name.second_name">Segundo Nombre:</label>
+                <input type="text" class="form-control" id="second_name" [(ngModel)]="formData.contact_name.second_name" name="contact_name.second_name" disabled>
+              </div>
+              <div class="form-group">
+                <label for="contact_name.last_name">Apellido Paterno:</label>
+                <input type="text" class="form-control" id="last_name" [(ngModel)]="formData.contact_name.last_name" name="contact_name.last_name" disabled>
+              </div>
+              <div class="form-group">
+                <label for="contact_name.second_last_name">Apellido Materno:</label>
+                <input type="text" class="form-control" id="second_last_name" [(ngModel)]="formData.contact_name.second_last_name" name="contact_name.second_last_name" disabled>
+              </div>
+              <div class="form-group">
+                <label for="birth_date">Fecha de Nacimiento:</label>
+                <input type="text" class="form-control" id="birth_date" [(ngModel)]="formData.birth_date" name="birth_date" disabled>
+              </div>
+              <div class="form-group">
+                <label for="birth_country_code">Código de País de Nacimiento:</label>
+                <input type="text" class="form-control" id="birth_country_code" [(ngModel)]="formData.birth_country_code" name="birth_country_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="birth_country">País de Nacimiento:</label>
+                <input type="text" class="form-control" id="birth_country" [(ngModel)]="formData.birth_country" name="birth_country" disabled>
+              </div>
+              <div class="form-group">
+                <label for="marital_status_code">Código de Estado Civil:</label>
+                <input type="text" class="form-control" id="marital_status_code" [(ngModel)]="formData.marital_status_code" name="marital_status_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="marital_status">Estado Civil:</label>
+                <input type="text" class="form-control" id="marital_status" [(ngModel)]="formData.marital_status" name="marital_status" disabled>
+              </div>
+              <div class="form-group">
+                <label for="nationality_code">Código de Nacionalidad:</label>
+                <input type="text" class="form-control" id="nationality_code" [(ngModel)]="formData.nationality_code" name="nationality_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="nationality">Nacionalidad:</label>
+                <input type="text" class="form-control" id="nationality" [(ngModel)]="formData.nationality" name="nationality" disabled>
+              </div>
+              <div class="form-group">
+                <label for="profession_code">Código de Profesión:</label>
+                <input type="text" class="form-control" id="profession_code" [(ngModel)]="formData.profession_code" name="profession_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="profession">Profesión:</label>
+                <input type="text" class="form-control" id="profession" [(ngModel)]="formData.profession" name="profession" disabled>
+              </div>
+              <div class="form-group">
+                <label for="economic_activity_code">Código de Actividad Económica:</label>
+                <input type="text" class="form-control" id="economic_activity_code" [(ngModel)]="formData.economic_activity_code" name="economic_activity_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="economic_activity">Actividad Económica:</label>
+                <input type="text" class="form-control" id="economic_activity" [(ngModel)]="formData.economic_activity" name="economic_activity" disabled>
+              </div>
+              <div class="form-group">
+                <label for="location_information.residence_code">Código de Residencia:</label>
+                <input type="text" class="form-control" id="residence_code" [(ngModel)]="formData.location_information.residence_code" name="location_information.residence_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="location_information.residence">Residencia:</label>
+                <input type="text" class="form-control" id="residence" [(ngModel)]="formData.location_information.residence" name="location_information.residence" disabled>
+              </div>
+              <div class="form-group">
+                <label for="location_information.address">Dirección:</label>
+                <input type="text" class="form-control" id="address" [(ngModel)]="formData.location_information.address" name="location_information.address" disabled>
+              </div>
+              <div class="form-group">
+                <label for="location_information.geo_location_code">Código de Ubicación Geográfica:</label>
+                <input type="text" class="form-control" id="geo_location_code" [(ngModel)]="formData.location_information.geo_location_code" name="location_information.geo_location_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="location_information.geo_location">Ubicación Geográfica:</label>
+                <input type="text" class="form-control" id="geo_location" [(ngModel)]="formData.location_information.geo_location" name="location_information.geo_location" disabled>
+              </div>
+              <div class="form-group">
+                <label for="location_information.phone">Teléfono:</label>
+                <input type="text" class="form-control" id="phone" [(ngModel)]="formData.location_information.phone" name="location_information.phone" disabled>
+              </div>
+              <div class="form-group">
+                <label for="location_information.cell_phone">Teléfono Celular:</label>
+                <input type="text" class="form-control" id="cell_phone" [(ngModel)]="formData.location_information.cell_phone" name="location_information.cell_phone" disabled>
+              </div>
+              <div class="form-group">
+                <label for="location_information.email">Correo Electrónico:</label>
+                <input type="text" class="form-control" id="email" [(ngModel)]="formData.location_information.email" name="location_information.email" disabled>
+              </div>
+              <div class="form-group">
+                <label for="job_information.job_code">Código de Trabajo:</label>
+                <input type="text" class="form-control" id="job_code" [(ngModel)]="formData.job_information.job_code" name="job_information.job_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="job_information.job">Trabajo:</label>
+                <input type="text" class="form-control" id="job" [(ngModel)]="formData.job_information.job" name="job_information.job" disabled>
+              </div>
+              <div class="form-group">
+                <label for="job_information.monthly_income">Ingreso Mensual:</label>
+                <input type="text" class="form-control" id="monthly_income" [(ngModel)]="formData.job_information.monthly_income" name="job_information.monthly_income" disabled>
+              </div>
+              <div class="form-group">
+                <label for="job_information.work_place">Lugar de Trabajo:</label>
+                <input type="text" class="form-control" id="work_place" [(ngModel)]="formData.job_information.work_place" name="job_information.work_place" disabled>
+              </div>
+              <div class="form-group">
+                <label for="job_information.work_geo_location_code">Código de Ubicación Geográfica del Trabajo:</label>
+                <input type="text" class="form-control" id="work_geo_location_code" [(ngModel)]="formData.job_information.work_geo_location_code" name="job_information.work_geo_location_code" disabled>
+              </div>
+              <div class="form-group">
+                <label for="job_information.work_geo_location">Ubicación Geográfica del Trabajo:</label>
+                <input type="text" class="form-control" id="work_geo_location" [(ngModel)]="formData.job_information.work_geo_location" name="job_information.work_geo_location" disabled>
+              </div>
+              <div class="form-group">
+                <label for="is_pep">Es PEP:</label>
+                <input type="text" class="form-control" id="is_pep" [(ngModel)]="formData.is_pep" name="is_pep" disabled>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+    </div>
+  </div>
+  
