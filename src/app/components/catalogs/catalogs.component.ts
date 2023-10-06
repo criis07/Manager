@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { CatalogsService } from '../../services/catalogs.service';
 import { GeograficLocations } from 'src/app/interfaces/catalogs/geograficLocations';
 import { Observable } from 'rxjs';
 import { GeoLocationFilterPipePipe } from 'src/app/pipes/geo-location-filter-pipe.pipe';
 import {NgForm} from '@angular/forms';
+import { SharedDataServiceService } from '../../services/shared-data-service.service';
 @Component({
   
   selector: 'app-catalogs',
@@ -13,13 +14,19 @@ import {NgForm} from '@angular/forms';
 })
 
 export class CatalogsComponent implements OnInit{
-
   public searchText = '';
+  Bank :string = '';
   catalogos : GeograficLocations[]= [];
-  constructor(private CatalogsService : CatalogsService, private GeoLocationFilterPipe: GeoLocationFilterPipePipe){}
+  constructor(private CatalogsService : CatalogsService, private GeoLocationFilterPipe: GeoLocationFilterPipePipe,
+    private SharedDataServiceService : SharedDataServiceService){}
 
   ngOnInit() {
     this.getGeoCatalogsAsync();
+    this.SharedDataServiceService.selectBank.subscribe((response) => {
+      this.Bank = response;
+      console.log(response);
+    });
+    
   }
 
   getGeoCatalogsAsync () {
@@ -34,4 +41,5 @@ export class CatalogsComponent implements OnInit{
     console.log(f.value);  // { first: '', last: '' }
     console.log(f.valid);  // false
   }
+  
 }

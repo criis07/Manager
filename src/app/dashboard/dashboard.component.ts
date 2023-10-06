@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit  } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
+import { SharedDataServiceService } from '../services/shared-data-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class DashboardComponent {
   private breakpointObserver = inject(BreakpointObserver);
-
+  SelectedBank : any;
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
