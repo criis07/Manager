@@ -1,16 +1,41 @@
-.example-spacer {
-    flex: 1 1 auto;
-  }
-  
-.mat-toolbar{
-background-color: #22c069;
-& span{
-    color: #ffffff ;
+.main-container{
+  max-height: 22rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
 }
+.button-search{
+  background: #115930;
+  margin-left: 1rem;
+} 
+
+.search-container{
+  display: flex;
+  flex-direction: row;
 }
 
-.bar{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.card-body input[type="text"] {
+  border-color: #115930;
 }
+  /* Estilo para el contenedor scrollable */
+  
+  /* Estilo para el scrollbar en navegadores basados en WebKit (por ejemplo, Chrome, Safari) */
+  .main-container::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+  }
+  
+  .main-container::-webkit-scrollbar-track {
+    background-color: #f8f9fa; /* Color de fondo de la pista del scrollbar */
+  }
+  
+  .main-container::-webkit-scrollbar-thumb {
+    background-color: #115930; /* Color del scrollbar */
+    border-radius: 4px; /* Borde redondeado del scrollbar */
+  }
+  
+  .main-container::-webkit-scrollbar-thumb:hover {
+    background-color: #115930; /* Cambia el color al pasar el cursor sobre el scrollbar */
+  }
+  

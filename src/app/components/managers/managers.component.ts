@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ManagersService } from '../../services/managers.service';
 import { HttpHeaders } from '@angular/common/http';
+import { Manager } from 'src/app/interfaces/manager';
 
 @Component({
   selector: 'app-managers',
@@ -8,19 +9,20 @@ import { HttpHeaders } from '@angular/common/http';
   styleUrls: ['./managers.component.css'],
 })
 export class ManagersComponent {
-
+  identification : string = '';
   data : any ;
+  public formData?: any;
   constructor(private ManagersService : ManagersService){}
 
   ngOnInit() : void{
-    this.getBeneficiaryAsync();
+    
   }
 
   getBeneficiaryAsync () {
-    console.log('hola');
-    this.ManagersService.getManager().subscribe(data => {
-      this.data = data;
-    console.log(this.data);
+    this.ManagersService.getManager(this.identification).subscribe(data => {
+    this.data = data;
+    this.formData = data;
+    console.log(this.formData)
   });
 }
 }

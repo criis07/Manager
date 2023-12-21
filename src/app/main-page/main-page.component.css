@@ -1,0 +1,58 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  background-color: #115930;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-toolbar{
+  background-color: #115930;
+  color: #fff;
+}
+/* styles.css */
+.logo{
+  max-height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Agrega otros estilos si es necesario */
+}
+
+.nav-item {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.nav-item span{
+  margin-left: 1rem;
+  
+}
+.nav-item:hover{
+  cursor: pointer;
+  }
+.nav-container{
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-bank{
+  color: #115930;
+}
+
+.nav-container span{
+  margin-top: 0.5rem;
+}

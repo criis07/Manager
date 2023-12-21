@@ -1,0 +1,70 @@
+
+   .main-container{
+    width: 100%;
+    max-height: 25rem;
+    overflow-y: scroll;
+    /* Estilos personalizados para el scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f8f9fa;
+   }
+   .search-header{
+    max-height: 4rem;
+   }
+   .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 2rem;
+    border-color: #115930;
+    border-radius: 5px;
+    background-color: #fff; /* Color de fondo del input */
+    color: #000000; /* Color de texto del input */
+  }
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100%; /* Altura fija para todas las tarjetas */
+  }
+  
+  .card-header {
+    background-color: #115930;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-text {
+    margin: 0;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+  }
+  /* Estilo para el contenedor scrollable */
+  
+  /* Estilo para el scrollbar en navegadores basados en WebKit (por ejemplo, Chrome, Safari) */
+  .main-container::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+  }
+  
+  .main-container::-webkit-scrollbar-track {
+    background-color: #f8f9fa; /* Color de fondo de la pista del scrollbar */
+  }
+  
+  .main-container::-webkit-scrollbar-thumb {
+    background-color: #115930; /* Color del scrollbar */
+    border-radius: 4px; /* Borde redondeado del scrollbar */
+  }
+  
+  .main-container::-webkit-scrollbar-thumb:hover {
+    background-color: #115930; /* Cambia el color al pasar el cursor sobre el scrollbar */
+  }
+  
